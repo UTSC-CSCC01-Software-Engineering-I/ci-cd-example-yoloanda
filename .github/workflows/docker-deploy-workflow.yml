@@ -19,8 +19,8 @@ jobs:
       
       - name: Push to Docker Hub
         run: |
-          docker tag ci-cd-example_frontend:latest ${{ secrets.DOCKER_USERNAME }}/cicd-demo-frontend:latest
-          docker tag ci-cd-example_backend:latest ${{ secrets.DOCKER_USERNAME }}/cicd-demo-backend:latest
+          docker tag ci-cd-example-yoloanda-frontend:latest ${{ secrets.DOCKER_USERNAME }}/cicd-demo-frontend:latest
+          docker tag ci-cd-example-yoloanda-backend:latest ${{ secrets.DOCKER_USERNAME }}/cicd-demo-backend:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/cicd-demo-frontend:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/cicd-demo-backend:latest
           docker images
